@@ -369,7 +369,7 @@ footer {
     }
 
     .fotos {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        grid-template-columns: max-content;
     }
 
     .fotos img {
@@ -380,4 +380,5 @@ footer {
         max-width: 95%;
         max-height: 80%;
     }
+
 }
