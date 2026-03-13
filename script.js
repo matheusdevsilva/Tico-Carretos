@@ -15,6 +15,8 @@ const imagens = [
     "./midias/foto10.jpeg",
     "./midias/foto11.jpeg",
     "./midias/foto12.jpeg",
+    "./midias/foto13.jpeg",
+    "./midias/foto14.jpeg",
 ]
 const viewer = document.getElementById("viewer")
 const viewerImg = document.getElementById("viewerImg")

@@ -6,12 +6,35 @@
     --whatsapp: #25D366;
 }
 
+
+::-webkit-scrollbar {
+    width: 16px; /* largura da barra vertical */
+}
+
+::-webkit-scrollbar-track {
+    background: #111; /* cor do fundo da barra */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary); /* cor da barra "ativa" */
+    border-radius: 10px;
+    border: 3px solid #111; /* espaço entre thumb e track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color:var(--primary); /* muda cor ao passar o mouse */
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) #111; /* thumb e track */
 }
 
 body {
@@ -168,6 +191,7 @@ h3.section-title {
 
 .services,
 .cargo,
+.midia,
 .contact {
     background: var(--dark-2);
 }
@@ -272,22 +296,23 @@ h3.section-title {
     object-fit: contain;
 }
 
-.fotos{
-    display:grid;
+.fotos {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap:15px;
-    max-width:1000px;
-    margin:auto;
+    gap: 15px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-.fotos img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:10px;
-    cursor:pointer;
-    transition:0.3s;
+.fotos img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
 }
+
 .fotos img:hover {
     transform: scale(1.05);
 }
@@ -369,7 +394,7 @@ footer {
     }
 
     .fotos {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        grid-template-columns: max-content;
     }
 
     .fotos img {
